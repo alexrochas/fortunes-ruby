@@ -7,5 +7,5 @@ group :test do
   gem 'rake'
   gem 'rspec'
   gem 'test-unit', '~> 3.2'
-  gem "codeclimate-test-reporter", require: nil
+  gem 'coveralls', require: false
 end
