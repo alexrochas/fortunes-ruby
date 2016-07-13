@@ -3,6 +3,5 @@ rvm:
   - 2.2
 script:
   - bundle exec rspec
-addons:
-  code_climate:
-    repo_token:f99362590319367370b0cfa099e5e9794f733d54335f9832aaca845b74033a96
+after_success:
+  - coveralls push
