@@ -1,8 +1,4 @@
-require_relative '../fortunes.rb'
-require 'rspec'
-require 'rack/test'
-
-set :environment, :test
+require 'spec_helper'
 
 describe "Fortune API" do
   include Rack::Test::Methods
