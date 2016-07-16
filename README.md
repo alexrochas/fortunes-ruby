@@ -1,5 +1,5 @@
-# Fortunes-ruby 
-> Debian fortune package in Ruby 
+# Fortunes-ruby
+> Debian fortune package in Ruby
 
 [![Build Status](https://travis-ci.org/alexrochas/fortunes-ruby.svg?branch=master)](https://travis-ci.org/alexrochas/fortunes-ruby)  [![Coverage Status](https://coveralls.io/repos/github/alexrochas/fortunes-ruby/badge.svg?branch=master)](https://coveralls.io/github/alexrochas/fortunes-ruby?branch=master)
 
@@ -10,14 +10,14 @@ Just made a port from Debian fortunes package and create an API with Sinatra.
 Linux:
 
 ```sh
-bundle install
+gem install fortunes-ruby
 ```
 
 ## Usage example
 
 After start server with
 ```bash
-ruby fortunes.rb
+fortunes-ruby
 ```
 Make requests to **http://127.0.0.1:4567/fortunes** and you will be served with fortune cookie messages like:
 ```
@@ -29,6 +29,7 @@ impression you will make.
 
 * 0.0.1
     * Work in progress, just add 'cookie' messages
+    * Add 'riddles' messages
 
 ## Meta
 
