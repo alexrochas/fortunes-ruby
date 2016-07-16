@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
+gem 'pickup'
 
 group :test do
   gem 'rack-test'

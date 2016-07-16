@@ -1,6 +1,6 @@
 require 'coveralls'
 Coveralls.wear!
-require_relative '../fortunes.rb'
+require_relative '../lib/fortunes.rb'
 require 'rspec'
 require 'rack/test'
 
