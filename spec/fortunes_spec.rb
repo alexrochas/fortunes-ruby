@@ -7,19 +7,33 @@ describe "Fortune API" do
     FortunesApp
   end
 
-  it "should return ok response" do
-    get '/fortunes'
-    expect(last_response).to be_ok
+  context 'when requesting fortunes' do
+    before { get '/fortunes' }
+    it { expect(last_response).to be_ok }
   end
 
-  it "should return only riddles" do
-    get '/fortunes?riddles=100'
-    expect(last_response).to be_ok
+  context "when requesting only riddles" do
+    before { get '/fortunes?riddles=100;cookie=0' }
+    it { expect(last_response).to be_ok }
+    it { expect(riddles_resource).to include(extract_json_message(last_response.body)) }
   end
 
-  it "should return a riddle" do
-    get '/fortunes/riddles'
-    expect(last_response).to be_ok
+  context "when requesting a riddle" do
+    before { get '/fortunes/riddles' }
+    it { expect(last_response).to be_ok }
+    it { expect(riddles_resource).to include(extract_json_message(last_response.body)) }
+  end
+
+  context "when requesting only cookies" do
+    before { get '/fortunes?cookie=50;riddles=0' }
+    it { expect(last_response).to be_ok }
+    it { expect(cookie_resource).to include(extract_json_message(last_response.body)) }
+  end
+
+  context "when requesting a cookie" do
+    before { get '/fortunes/cookie' }
+    it { expect(last_response).to be_ok }
+    it { expect(cookie_resource).to include(extract_json_message(last_response.body)) }
   end
 
 end
