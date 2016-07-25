@@ -1,7 +1,12 @@
 # Fortunes-ruby
 > Debian fortune package in Ruby
 
-[![Build Status](https://travis-ci.org/alexrochas/fortunes-ruby.svg?branch=master)](https://travis-ci.org/alexrochas/fortunes-ruby)  [![Coverage Status](https://coveralls.io/repos/github/alexrochas/fortunes-ruby/badge.svg?branch=master)](https://coveralls.io/github/alexrochas/fortunes-ruby?branch=master)
+[![Build Status](https://travis-ci.org/alexrochas/fortunes-ruby.svg?branch=master)](https://travis-ci.org/alexrochas/fortunes-ruby)
+[![Coverage Status](https://coveralls.io/repos/github/alexrochas/fortunes-ruby/badge.svg?branch=master)](https://coveralls.io/github/alexrochas/fortunes-ruby?branch=master)
+[![Gem Version](https://badge.fury.io/rb/fortunes-ruby.svg)](https://badge.fury.io/rb/fortunes-ruby)
+![](http://ruby-gem-downloads-badge.herokuapp.com/fortunes-ruby)
+
+
 
 Just made a port from Debian fortunes package and create an API with Sinatra.
 
