@@ -1,2 +1,2 @@
 require './fortunes'
-run Sinatra::Application
+FortunesApp.run!
