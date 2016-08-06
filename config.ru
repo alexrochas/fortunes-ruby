@@ -1,2 +1,2 @@
-require './fortunes'
+require './lib/fortunes'
 FortunesApp.run!
