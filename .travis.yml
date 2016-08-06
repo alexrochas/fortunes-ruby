@@ -1,7 +1,14 @@
 language: ruby
 rvm:
-  - 2.2
+- 2.2
 script:
-  - bundle exec rspec
+- bundle exec rspec
 after_success:
-  - coveralls push
+- coveralls push
+deploy:
+  provider: heroku
+  api_key:
+    secure: Rgc+ns9/oUUx4LgXJ63nu4FT2egWXkwk/j4+48j3r62xqeTCR/njghU6jiG9osFEToYj4CRYlKytSnsOiMVZk/BBJChV3e4lxgNNydtByybGrVOrCglJpdsmXXUDfcnfNSkfj2g4C6MBuLITBSnxEQ4wTHI+wS6Ba97B3FzCAvU5vtvFUbp6uSWQXU9bSRG//NNmmCF8PnW7Kt29LDPrR8qbsBsXbOSt9oqWgJir9/jI+zdtuUmFrXXXMYYOiqybFaorw307hDa130uZty5yenYgohnzyy4X2acP9oeNc3ZHUfntTXP88Z0wKeduvoeKoGI2Ulppj8UOskYXcCGGGuA3m34g27SHADiaLdIFspKbZBBlDIq21SNZdqvqBBlyoDPoPL1DfJCXcoYOaPR3xQxO90ch6eLLeHE+v5WsD03Zp9S1bpD8wvnU8VXs4vR/LtIdhREvXLJF2wQPtuVL8wU0VwR8cNsuSuXdCiiJZBaSgMozt07EhYRKJ4kfrgN1uG71ERjUq+aAsfZ0u3FSUTP5jRkIlb5bwu13816VPOXKnPmOA1KjF8LRGVGiUn8HMsgfWvSHqtz/WgNGQ1Jc3qzvSZkH3tgTdaxGAuANDN6bJZ6sHULW2E0JroyLPWID8iDAuUwlay1CYTPyqXC+s/B+7XdzTaTyiFM3TUVjJ7M=
+  app: fortunes-ruby
+  on:
+    repo: alexrochas/fortunes-ruby
