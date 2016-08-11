@@ -5,6 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/alexrochas/fortunes-ruby/badge.svg?branch=master)](https://coveralls.io/github/alexrochas/fortunes-ruby?branch=master)
 [![Gem Version](https://badge.fury.io/rb/fortunes-ruby.svg)](https://badge.fury.io/rb/fortunes-ruby)
 ![](http://ruby-gem-downloads-badge.herokuapp.com/fortunes-ruby)
+![Heroku](https://heroku-badge.herokuapp.com/?app=fortunes-ruby&root=fortunes)
 
 
 
