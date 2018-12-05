@@ -1,26 +1,13 @@
-require 'sinatra'
 require 'json'
-require 'pickup'
 require_relative 'fortunes_helper'
 
-class FortunesApp < Sinatra::Base
+class Fortunes
 
   Fortune = Struct.new(:message)
 
-  fortune_files = {
-      'cookie' => 1,
-      'riddles' => 1
-  }
-
-  get '/fortunes' do
-    fortune_files.merge!(params){|key, oldval, newval| newval.to_i} unless params.empty?
-    random_file = Pickup.new(fortune_files).pick(1)
-    random_file >> read_file >> parse_file >> extract_sample >> generate_json
-  end
-
-  get '/fortunes/:type' do
-    file_name = params['type']
-    file_name >> read_file >> parse_file >> extract_sample >> generate_json
+  def fortune 
+    file_name = 'brasil'
+    file_name >> read_file >> parse_file >> extract_sample
   end
 
   private
@@ -39,5 +26,4 @@ class FortunesApp < Sinatra::Base
     def generate_json
       -> (message) {JSON.pretty_generate({:message=> message})}
     end
-
 end
